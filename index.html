@@ -19,6 +19,7 @@
        • How it works ............... search for  PROCESS SECTION
        • Booking calendar ........... search for  CALENDLY_URL  (paste your link there)
        • Contact form ............... search for  CONTACT SECTION
+       • Business card .............. search for  BUSINESS CARD SECTION
        • Footer ..................... search for  FOOTER SECTION
        • Colors ..................... search for  COLOR PALETTE
        • Your photo ................. it's the file patricia.jpg (replace it to update)
@@ -583,6 +584,37 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .form-note svg{width:17px;height:17px;flex:none;color:var(--gold-600);margin-top:.2rem}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.form-row{grid-template-columns:1fr}}
+
+/* ============================================================
+   BUSINESS CARD
+   ============================================================ */
+.bizcard{background:var(--paper);border-block:1px solid var(--line)}
+.bizcard-inner{text-align:center;max-width:800px;margin-inline:auto}
+.bizcard-inner .section-title,
+.bizcard-inner .section-intro{margin-inline:auto}
+.bizcard-preview{
+  margin:2.25rem auto 0;
+  max-width:720px;
+}
+.bizcard-preview img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-lift);
+  background:var(--cream);
+}
+.bizcard-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.9rem;
+  margin-top:1.75rem;
+}
+@media (max-width:560px){
+  .bizcard-actions{flex-direction:column;align-items:stretch}
+  .bizcard-actions .btn{justify-content:center;width:100%}
+}
 
 /* ============================================================
    FOOTER
@@ -1346,6 +1378,34 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   </div>
 </section>
 
+<!-- ============================================================
+     BUSINESS CARD SECTION — downloadable card and vCard contact file
+     ============================================================ -->
+<section class="bizcard" id="business-card" aria-labelledby="bizcard-title">
+  <div class="wrap">
+    <div class="bizcard-inner reveal">
+      <p class="eyebrow" style="justify-content:center">Take me with you</p>
+      <h2 class="section-title" id="bizcard-title">My Business Card</h2>
+      <p class="section-intro">Save a copy of the card, or tap <em>Save my contact</em> to add Patricia's name, phone, and email to your phone.</p>
+
+      <figure class="bizcard-preview">
+        <img src="card-with-qr.png" width="1050" height="600" alt="Patricia Woods business card for Integrity Bookkeeping Service. Phone 945-389-1318, email patsbookkeeping25@gmail.com, website woodsintegrityservice.com, and a QR code that opens the website.">
+      </figure>
+
+      <div class="bizcard-actions">
+        <a class="btn btn-primary" href="card-with-qr.png" download="Patricia-Woods-business-card.png">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 21h16"/></svg>
+          Download card
+        </a>
+        <a class="btn btn-ghost" href="patricia-woods.vcf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M16 11h6"/></svg>
+          Save my contact
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ============================================================
@@ -1370,6 +1430,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#business-card">Business Card</a></li>
       </ul>
     </div>
     <p class="footer-blurb">Integrity Bookkeeping Service offers monthly bookkeeping and reconciliation, QuickBooks
